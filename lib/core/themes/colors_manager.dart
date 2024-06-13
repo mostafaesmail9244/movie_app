@@ -12,6 +12,6 @@ class ColorsManager {
   static const Color lightPurple = Color(0xffFD06D5);
   static const Color fillRed = Color(0xffFF4C5E);
   static const Color lightGrey = Color(0xffc2c2c2);
+  static const Color moreLightGrey = Color(0xffD9D9D9);
   static const Color lighterGrey = Color(0xffededed);
-  static const Color moreLightGrey = Color(0xfffdfdff);
 }
