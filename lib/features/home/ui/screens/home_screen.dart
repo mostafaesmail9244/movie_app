@@ -1,9 +1,11 @@
 import 'package:fancy_shimmer_image/fancy_shimmer_image.dart';
 import 'package:flutter/material.dart';
+import 'package:movie_app/core/helper/extentions.dart';
 import 'package:movie_app/core/helper/spacing_helper.dart';
+import 'package:movie_app/core/router/routes.dart';
 import 'package:movie_app/core/themes/text_styles.dart';
 import 'package:movie_app/core/widgets/background_widget.dart';
-import 'package:movie_app/features/home/data/models/response/film_model.dart';
+import 'package:movie_app/features/home/data/models/response/movie_model.dart';
 import 'package:movie_app/features/home/ui/widgets/carousel_slider_widget.dart';
 import 'package:movie_app/features/home/ui/widgets/custom_app_bar.dart';
 
@@ -36,17 +38,17 @@ class HomeScreen extends StatelessWidget {
                   //actions
                   Text('Action', style: TextStyles.font13WhiteSemiBold),
                   verticalSpacing(5),
-                  ListFilm(films: comedyFilms),
+                  ListFilm(films: actionMovies),
                   verticalSpacing(20),
                   //comedy
                   Text('Fantasy', style: TextStyles.font13WhiteSemiBold),
                   verticalSpacing(5),
-                  ListFilm(films: comedyFilms),
+                  ListFilm(films: comedyMovies),
                   //fantasy
                   verticalSpacing(20),
                   Text('Fantasy', style: TextStyles.font13WhiteSemiBold),
                   verticalSpacing(5),
-                  ListFilm(films: fantasyFilms),
+                  ListFilm(films: fantasyMovies),
                 ],
               ),
             ),
@@ -62,7 +64,7 @@ class ListFilm extends StatelessWidget {
     Key? key,
     required this.films,
   }) : super(key: key);
-  final List<FilmModel> films;
+  final List<MovieModel> films;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -70,13 +72,21 @@ class ListFilm extends StatelessWidget {
       child: ListView.builder(
         itemBuilder: (context, index) => ClipRRect(
           borderRadius: BorderRadius.circular(16),
-          child: Padding(
-            padding: EdgeInsets.only(left: index == 0 ? 0 : 6),
-            child: SizedBox(
-              height: 110,
-              width: 112,
-              child: FancyShimmerImage(
-                imageUrl: films[index].image!,
+          child: InkWell(
+            onTap: () {
+              context.pushNamed(
+                Routes.detailsScreen,
+                arguments: films[index],
+              );
+            },
+            child: Padding(
+              padding: EdgeInsets.only(left: index == 0 ? 0 : 6),
+              child: SizedBox(
+                height: 110,
+                width: 112,
+                child: FancyShimmerImage(
+                  imageUrl: films[index].image!,
+                ),
               ),
             ),
           ),
