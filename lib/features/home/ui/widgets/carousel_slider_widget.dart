@@ -1,6 +1,12 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:fancy_shimmer_image/fancy_shimmer_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import 'package:movie_app/core/helper/extentions.dart';
+import 'package:movie_app/core/router/routes.dart';
+import 'package:movie_app/features/home/data/models/response/movie_model.dart';
 
 class CarouselSliderWidget extends StatelessWidget {
   const CarouselSliderWidget({
@@ -15,7 +21,19 @@ class CarouselSliderWidget extends StatelessWidget {
       child: CarouselSlider.builder(
         itemCount: 10,
         disableGesture: false,
-        itemBuilder: (context, index, realIndex) => const CarouselItem(),
+        itemBuilder: (context, index, realIndex) => Padding(
+          padding: const EdgeInsets.symmetric(horizontal:  8.0),
+          child: InkWell(
+              onTap: () {
+                context.pushNamed(
+                  Routes.detailsScreen,
+                  arguments: popularMovies[index],
+                );
+              },
+              child: CarouselItem(
+                image: popularMovies[index].image!,
+              )),
+        ),
         options: CarouselOptions(
           initialPage: 0,
           reverse: false,
@@ -34,14 +52,17 @@ class CarouselSliderWidget extends StatelessWidget {
 }
 
 class CarouselItem extends StatelessWidget {
-  const CarouselItem({super.key});
-
+  const CarouselItem({
+    Key? key,
+    required this.image,
+  }) : super(key: key);
+  final String image;
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
       borderRadius: BorderRadius.circular(16),
-      child: Image.network(
-        'https://2u.pw/cm5jtnRn',
+      child: FancyShimmerImage(
+        imageUrl: image,
         height: 120.h,
         width: double.infinity,
       ),

@@ -244,7 +244,7 @@ List<MovieModel> actionMovies = [
     feedBack: [
       "Groundbreaking visual effects.",
       "A mind-bending action thriller.",
-      "A must-see sci-fi action film."
+      "A must-see  action film."
     ],
   ),
   MovieModel(
@@ -445,4 +445,101 @@ List<MovieModel> fantasyMovies = [
       "Captivating and magical from start to finish."
     ],
   ),
+];
+
+List<MovieModel> popularMovies = [
+  MovieModel(
+      name: "Avatar: The Way of Water",
+      image:
+          "https://th.bing.com/th/id/OIP.vKl2WL7kRrGK_N_5zGnMkgHaLG?w=123&h=184&c=7&r=0&o=5&pid=1.7",
+      description: "Jake Sully lives with his newfound family formed on the planet of Pandora.",
+      age: 13,
+      type: "Action, Adventure, Fantasy",
+      rating: "106",
+      feedBack: ["Visually stunning", "Epic storytelling", "Great sequel"]),
+  MovieModel(
+      name: "Spider-Man: No Way Home",
+      image:
+          "https://th.bing.com/th/id/OIP.-LMoeJrawXlk-fOnwv9OngHaKz?w=186&h=272&c=7&r=0&o=5&pid=1.7",
+      description: "Peter Parker's life and reputation are turned upside down when Mysterio reveals his identity to the world.",
+      age: 12,
+      type: "Action, Adventure",
+      rating: "106",
+      feedBack: ["Amazing visuals", "Nostalgic", "Emotional"]),
+  MovieModel(
+      name: "Dune",
+      image:
+          "https://th.bing.com/th/id/OIP.yFIyWoiKZLfWbKsPhEUbYwHaJQ?w=186&h=233&c=7&r=0&o=5&pid=1.7",
+      description: "Paul Atreides leads nomadic tribes in a battle to control the desert planet Arrakis.",
+      age: 14,
+      type: "Adventure, Drama,",
+      rating: "106",
+      feedBack: ["Epic scope", "Great acting", "Fantastic visuals"]),
+  MovieModel(
+      name: "The Batman",
+      image:
+          "https://th.bing.com/th/id/OIP.Ixx7-LdFLFBQtGiPspXtlgHaLH?w=115&h=180&c=7&r=0&o=5&pid=1.7",
+      description: "In his second year of fighting crime, Batman uncovers corruption in Gotham City that connects to his own family.",
+      age: 15,
+      type: "Action, Drama",
+      rating: "106",
+      feedBack: [
+        "Dark and gritty",
+        "Compelling story",
+        "Great performance by Pattinson"
+      ]),
+  MovieModel(
+      name: "Doctor Strange in the Multiverse of Madness",
+      image:
+          "https://th.bing.com/th/id/OIP.PxO2NJXEO2TqB-3G4XCV8AHaK-?w=186&h=276&c=7&r=0&o=5&pid=1.7",
+      description: "Dr. Stephen Strange casts a forbidden spell that opens the door to the multiverse.",
+      age: 13,
+      type: "Action, Adventure, Fantasy",
+      rating: "106",
+      feedBack: ["Mind-bending", "Exciting", "Visually stunning"]),
+  MovieModel(
+      name: "Black Panther: Wakanda Forever",
+      image:
+          "https://th.bing.com/th/id/OIP.udstHPF8mPl8hm3gOsKkwQHaLQ?w=127&h=194&c=7&r=0&o=5&pid=1.7",
+      description: "The people of Wakanda fight to protect their home from intervening world powers as they mourn the loss of King T’Challa.",
+      age: 12,
+      type: "Action, Adventure, Drama",
+      rating: "106",
+      feedBack: ["Emotional", "Cultural impact", "Great tribute"]),
+  MovieModel(
+      name: "Top Gun: Maverick",
+      image:
+          "https://th.bing.com/th/id/OIP.deO1VkuzXDkSK22UBeofbgHaHa?w=168&h=180&c=7&r=0&o=5&pid=1.7",
+      description: "After more than thirty years of service as one of the Navy's top aviators, Pete Mitchell is where he belongs, pushing the envelope as a courageous test pilot.",
+      age: 14,
+      type: "Action, Drama",
+      rating: "236",
+      feedBack: ["Thrilling", "Nostalgic", "Great action"]),
+  MovieModel(
+      name: "Thor: Love and Thunder",
+      image:
+          "https://th.bing.com/th/id/OIP.-7TY6o_wokpC4SJNaDJeoAHaK-?w=119&h=180&c=7&r=0&o=5&pid=1.7",
+      description: "Thor enlists the help of Valkyrie, Korg and ex-girlfriend Jane Foster to fight Gorr the God Butcher.",
+      age: 13,
+      type: "Action, Adventure",
+      rating: "106",
+      feedBack: ["Fun", "Action-packed", "Great humor"]),
+  MovieModel(
+      name: "Jurassic World Dominion",
+      image:
+          "https://th.bing.com/th/id/OIP.5mDC11Pody3JzEhEzskVoAAAAA?w=186&h=275&c=7&r=0&o=5&pid=1.7",
+      description: "Four years after Isla Nublar has been destroyed, dinosaurs now live—and hunt—alongside humans all over the world.",
+      age: 13,
+      type: "Action, Adventure",
+      rating: "106",
+      feedBack: ["Exciting", "Dinosaurs!", "Nostalgic"]),
+  MovieModel(
+      name: "Minions: The Rise of Gru",
+      image:
+          "https://th.bing.com/th/id/OIP.8Xtlak8uLTIxzzo-rtTGZgAAAA?w=115&h=180&c=7&r=0&o=5&pid=1.7",
+      description: "The untold story of one twelve-year-old's dream to become the world's greatest supervillain.",
+      age: 6,
+      type: "Comedy, Family",
+      rating: "PG",
+      feedBack: ["Hilarious", "Family-friendly", "Cute"]),
 ];

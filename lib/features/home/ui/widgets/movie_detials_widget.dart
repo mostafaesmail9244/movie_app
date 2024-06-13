@@ -1,4 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:fancy_shimmer_image/fancy_shimmer_image.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -32,13 +34,14 @@ class MovieDetailsWidget extends StatelessWidget {
         children: [
           ClipRRect(
             borderRadius: BorderRadius.circular(8),
-            child: Image.network(
-              movie.image!,
+            child: FancyShimmerImage(
+              imageUrl: movie.image!,
+              boxFit: BoxFit.fill,
               height: 200.h,
               width: double.infinity,
-              fit: BoxFit.fill,
             ),
           ),
+
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -66,12 +69,14 @@ class MovieDetailsWidget extends StatelessWidget {
                 style: TextStyles.font14PurpleRegular,
               ),
               const Spacer(),
-              Text(
-                'From ${movie.rating} users',
-                style: TextStyle(
-                  color: Colors.black.withOpacity(0.5),
-                  fontWeight: FontWeightHelper.regular,
-                  fontSize: 14.sp,
+              FittedBox(
+                child: Text(
+                  'From ${movie.rating} users',
+                  style: TextStyle(
+                    color: Colors.black.withOpacity(0.5),
+                    fontWeight: FontWeightHelper.regular,
+                    fontSize: 14.sp,
+                  ),
                 ),
               ),
             ],

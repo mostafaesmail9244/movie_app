@@ -31,16 +31,15 @@ class _CustomAppBarState extends State<CustomAppBar> {
           ),
           child: Row(
             children: [
-              if (isSearch)
+              if (!isSearch)
                 IconButton(
                   onPressed: () {},
                   icon: SvgPicture.asset(
                     'assets/svg/search_image.svg',
                   ),
                 ),
-              if (isSearch)
-                if (isSearch) const Spacer(),
-              if (isSearch)
+              if (!isSearch) const Spacer(),
+              if (!isSearch)
                 IconButton(
                   onPressed: () {
                     setState(() {
@@ -52,7 +51,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
                     color: Colors.white,
                   ),
                 ),
-              if (!isSearch)
+              if (isSearch)
                 Expanded(
                   child: CustomTextFormField(
                     enabledBorder: InputBorder.none,
@@ -62,7 +61,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
                     backGroundColor: ColorsManager.lightGrey.withOpacity(.0),
                   ),
                 ),
-              if (!isSearch)
+              if (isSearch)
                 IconButton(
                   onPressed: () {
                     setState(() {

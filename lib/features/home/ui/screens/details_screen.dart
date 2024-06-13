@@ -38,7 +38,7 @@ class DetailsScreen extends StatelessWidget {
                       },
                       icon: const Icon(Icons.arrow_back_ios_new)),
                   //movie details
-                   MovieDetailsWidget(
+                  MovieDetailsWidget(
                     movie: movie,
                   ),
                   verticalSpacing(20),
