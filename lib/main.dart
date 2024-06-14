@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:movie_app/core/router/app_router.dart';
 import 'package:movie_app/core/router/routes.dart';
+import 'package:movie_app/features/download/ui/screens/download_screen.dart';
 
 void main() {
   runApp(const MovieApp());
@@ -23,6 +24,7 @@ class MovieApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           initialRoute: Routes.homeScreen,
           title: 'Movie App',
+          // home: const DownloadScreen(),
         );
       },
     );
